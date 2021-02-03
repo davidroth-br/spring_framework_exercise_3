@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="spring" class="com.montrealcollege.exercise3.entities.Program">
+        <property name="name" value="Spring"/>
+        <property name="duration" value="5"/>
+    </bean>
+
+    <bean id="david" class="com.montrealcollege.exercise3.entities.Students">
+        <constructor-arg name="firstName" value="David"/>
+        <constructor-arg name="lastName" value="Roth"/>
+        <property name="program" ref="spring"/>
+    </bean>
+
+    <bean id="laryne" class="com.montrealcollege.exercise3.entities.Students">
+        <constructor-arg name="firstName" value="Laryne"/>
+        <constructor-arg name="lastName" value="Santana"/>
+        <property name="program" ref="spring"/>
+    </bean>
+
+    <bean id="john" class="com.montrealcollege.exercise3.entities.Students">
+        <constructor-arg name="firstName" value="John"/>
+        <constructor-arg name="lastName" value="Doe"/>
+        <property name="program" ref="spring"/>
+    </bean>
+</beans>
